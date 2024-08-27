@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "291647db-526f-4406-817a-fbd19cc0c8f2",
+		"name": "abi-access-control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10660445"
+	},
+	"item": [
+		{
+			"name": "users/:user_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3001/users/66c8d271f5b68d63c5a232c1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"users",
+						"66c8d271f5b68d63c5a232c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users-by-email/:email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3001/users-by-email/admin@email.com",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"users-by-email",
+						"admin@email.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@email.com\",\r\n    \"password\": \"password\",\r\n    \"name\": \"User XPTO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/signin",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

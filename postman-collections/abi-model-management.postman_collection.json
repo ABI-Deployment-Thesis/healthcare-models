@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "ca7b314e-8dde-45e0-9d2c-18bcf403fcbc",
+		"name": "abi-model-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10660445"
+	},
+	"item": [
+		{
+			"name": "getModels/:model_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3002/models/66cc9a7d7723a022721f45ef",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"66cc9a7d7723a022721f45ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getModels",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3002/models",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_diabetes_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/diabetes/models/diabetes_decision_tree_py.sav"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"Pregnancies\", \"type\":\"int\", \"order\": 1},{\"name\":\"Glucose\", \"type\":\"int\", \"order\": 2},{\"name\":\"BloodPressure\", \"type\":\"int\", \"order\": 3},{\"name\":\"SkinThickness\", \"type\":\"int\", \"order\": 4},{\"name\":\"Insulin\", \"type\":\"float\", \"order\": 5},{\"name\":\"BMI\", \"type\":\"float\", \"order\": 6},{\"name\":\"DiabetesPedigreeFunction\", \"type\":\"float\", \"order\": 7},{\"name\":\"Age\", \"type\":\"int\", \"order\": 8}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"joblib\", \"version\":\"1.0.1\"},{\"library\":\"numpy\", \"version\":\"1.22.4\"},{\"library\":\"scikit-learn\", \"version\":\"0.24.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "diabetes_decision_tree_py.sav",
+							"type": "text"
+						},
+						{
+							"key": "serialization",
+							"value": "joblib",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_diabetes_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/diabetes/models/diabetes_logistic_regression_r.rds"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"pregnant\", \"type\":\"int\", \"order\": 1},{\"name\":\"glucose\", \"type\":\"int\", \"order\": 2},{\"name\":\"pressure\", \"type\":\"int\", \"order\": 3},{\"name\":\"triceps\", \"type\":\"int\", \"order\": 4},{\"name\":\"insulin\", \"type\":\"int\", \"order\": 5},{\"name\":\"mass\", \"type\":\"float\", \"order\": 6},{\"name\":\"pedigree\", \"type\":\"float\", \"order\": 7},{\"name\":\"age\", \"type\":\"int\", \"order\": 8}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"caret\", \"version\":\"6.0.94\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "diabetes_logistic_regression_r.rds",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/r",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_fetal_health_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/fetal-health/models/fetal_health_random_forest_py.sav"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"baseline value\",\"type\":\"float\",\"order\":1},{\"name\":\"accelerations\",\"type\":\"float\",\"order\":2},{\"name\":\"fetal_movement\",\"type\":\"float\",\"order\":3},{\"name\":\"uterine_contractions\",\"type\":\"float\",\"order\":4},{\"name\":\"light_decelerations\",\"type\":\"float\",\"order\":5},{\"name\":\"severe_decelerations\",\"type\":\"float\",\"order\":6},{\"name\":\"prolongued_decelerations\",\"type\":\"float\",\"order\":7},{\"name\":\"abnormal_short_term_variability\",\"type\":\"float\",\"order\":8},{\"name\":\"mean_value_of_short_term_variability\",\"type\":\"float\",\"order\":9},{\"name\":\"percentage_of_time_with_abnormal_long_term_variability\",\"type\":\"float\",\"order\":10},{\"name\":\"mean_value_of_long_term_variability\",\"type\":\"float\",\"order\":11},{\"name\":\"histogram_width\",\"type\":\"float\",\"order\":12},{\"name\":\"histogram_min\",\"type\":\"float\",\"order\":13},{\"name\":\"histogram_max\",\"type\":\"float\",\"order\":14},{\"name\":\"histogram_number_of_peaks\",\"type\":\"float\",\"order\":15},{\"name\":\"histogram_number_of_zeroes\",\"type\":\"float\",\"order\":16},{\"name\":\"histogram_mode\",\"type\":\"float\",\"order\":17},{\"name\":\"histogram_mean\",\"type\":\"float\",\"order\":18},{\"name\":\"histogram_median\",\"type\":\"float\",\"order\":19},{\"name\":\"histogram_variance\",\"type\":\"float\",\"order\":20},{\"name\":\"histogram_tendency\",\"type\":\"float\",\"order\":21}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"joblib\", \"version\":\"1.0.1\"},{\"library\":\"numpy\", \"version\":\"1.22.4\"},{\"library\":\"scikit-learn\", \"version\":\"0.24.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "fetal_health_random_forest_py.sav",
+							"type": "text"
+						},
+						{
+							"key": "serialization",
+							"value": "joblib",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_fetal_health_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/fetal-health/models/fetal_health_random_forest_r.rds"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"baseline.value\",\"type\":\"float\",\"order\":1},{\"name\":\"accelerations\",\"type\":\"float\",\"order\":2},{\"name\":\"fetal_movement\",\"type\":\"float\",\"order\":3},{\"name\":\"uterine_contractions\",\"type\":\"float\",\"order\":4},{\"name\":\"light_decelerations\",\"type\":\"float\",\"order\":5},{\"name\":\"severe_decelerations\",\"type\":\"float\",\"order\":6},{\"name\":\"prolongued_decelerations\",\"type\":\"float\",\"order\":7},{\"name\":\"abnormal_short_term_variability\",\"type\":\"float\",\"order\":8},{\"name\":\"mean_value_of_short_term_variability\",\"type\":\"float\",\"order\":9},{\"name\":\"percentage_of_time_with_abnormal_long_term_variability\",\"type\":\"float\",\"order\":10},{\"name\":\"mean_value_of_long_term_variability\",\"type\":\"float\",\"order\":11},{\"name\":\"histogram_width\",\"type\":\"float\",\"order\":12},{\"name\":\"histogram_min\",\"type\":\"float\",\"order\":13},{\"name\":\"histogram_max\",\"type\":\"float\",\"order\":14},{\"name\":\"histogram_number_of_peaks\",\"type\":\"float\",\"order\":15},{\"name\":\"histogram_number_of_zeroes\",\"type\":\"float\",\"order\":16},{\"name\":\"histogram_mode\",\"type\":\"float\",\"order\":17},{\"name\":\"histogram_mean\",\"type\":\"float\",\"order\":18},{\"name\":\"histogram_median\",\"type\":\"float\",\"order\":19},{\"name\":\"histogram_variance\",\"type\":\"float\",\"order\":20},{\"name\":\"histogram_tendency\",\"type\":\"float\",\"order\":21}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"randomForest\", \"version\":\"4.7.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "fetal_health_random_forest_r.rds",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/r",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_insurance_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/insurance/models/insurance_gbr_py.sav"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"age\", \"type\":\"int\", \"order\": 1},{\"name\":\"sex\", \"type\":\"int\", \"order\": 2},{\"name\":\"bmi\", \"type\":\"float\", \"order\": 3},{\"name\":\"children\", \"type\":\"int\", \"order\": 4},{\"name\":\"smoker\", \"type\":\"int\", \"order\": 5},{\"name\":\"region\", \"type\":\"int\", \"order\": 6}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"joblib\", \"version\":\"1.0.1\"},{\"library\":\"numpy\", \"version\":\"1.22.4\"},{\"library\":\"scikit-learn\", \"version\":\"0.24.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "insurance_gbr_py.sav",
+							"type": "text"
+						},
+						{
+							"key": "serialization",
+							"value": "joblib",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_insurance_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/insurance/models/insurance_linear_regression_r.rds"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"age\", \"type\":\"int\", \"order\": 1},{\"name\":\"sex\", \"type\":\"string\", \"order\": 2},{\"name\":\"bmi\", \"type\":\"float\", \"order\": 3},{\"name\":\"children\", \"type\":\"int\", \"order\": 4},{\"name\":\"smoker\", \"type\":\"string\", \"order\": 5},{\"name\":\"region\", \"type\":\"string\", \"order\": 6}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "insurance_linear_regression_r.rds",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/r",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_smoking_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/smoking/models/smoking_lightgbm_py.pkl"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"age\",\"type\":\"int\",\"order\":1},{\"name\":\"height(cm)\",\"type\":\"int\",\"order\":2},{\"name\":\"weight(kg)\",\"type\":\"int\",\"order\":3},{\"name\":\"waist(cm)\",\"type\":\"float\",\"order\":4},{\"name\":\"eyesight(left)\",\"type\":\"float\",\"order\":5},{\"name\":\"eyesight(right)\",\"type\":\"float\",\"order\":6},{\"name\":\"hearing(left)\",\"type\":\"int\",\"order\":7},{\"name\":\"hearing(right)\",\"type\":\"int\",\"order\":8},{\"name\":\"systolic\",\"type\":\"int\",\"order\":9},{\"name\":\"relaxation\",\"type\":\"int\",\"order\":10},{\"name\":\"fasting blood sugar\",\"type\":\"int\",\"order\":11},{\"name\":\"Cholesterol\",\"type\":\"int\",\"order\":12},{\"name\":\"triglyceride\",\"type\":\"int\",\"order\":13},{\"name\":\"HDL\",\"type\":\"int\",\"order\":14},{\"name\":\"LDL\",\"type\":\"int\",\"order\":15},{\"name\":\"hemoglobin\",\"type\":\"float\",\"order\":16},{\"name\":\"Urine protein\",\"type\":\"int\",\"order\":17},{\"name\":\"serum creatinine\",\"type\":\"float\",\"order\":18},{\"name\":\"AST\",\"type\":\"int\",\"order\":19},{\"name\":\"ALT\",\"type\":\"int\",\"order\":20},{\"name\":\"Gtp\",\"type\":\"int\",\"order\":21},{\"name\":\"dental caries\",\"type\":\"int\",\"order\":22}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"lightgbm\", \"version\":\"4.4.0\"},{\"library\":\"numpy\", \"version\":\"1.22.4\"},{\"library\":\"scikit-learn\", \"version\":\"0.24.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "smoking_lightgbm_py.pkl",
+							"type": "text"
+						},
+						{
+							"key": "serialization",
+							"value": "pickle",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_smoking_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/smoking/models/smoking_random_forest_r.rds"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"age\",\"type\":\"int\",\"order\":1},{\"name\":\"height.cm.\",\"type\":\"int\",\"order\":2},{\"name\":\"weight.kg.\",\"type\":\"int\",\"order\":3},{\"name\":\"sex_num\",\"type\":\"int\",\"order\":4},{\"name\":\"eyesight.left.\",\"type\":\"float\",\"order\":5},{\"name\":\"eyesight.right.\",\"type\":\"float\",\"order\":6},{\"name\":\"hearing.left.\",\"type\":\"int\",\"order\":7},{\"name\":\"hearing.right.\",\"type\":\"int\",\"order\":8},{\"name\":\"systolic\",\"type\":\"int\",\"order\":9},{\"name\":\"relaxation\",\"type\":\"int\",\"order\":10},{\"name\":\"Cholesterol\",\"type\":\"int\",\"order\":11},{\"name\":\"triglyceride\",\"type\":\"int\",\"order\":12},{\"name\":\"HDL\",\"type\":\"int\",\"order\":13},{\"name\":\"LDL\",\"type\":\"int\",\"order\":14},{\"name\":\"fasting.blood.sugar\",\"type\":\"int\",\"order\":15},{\"name\":\"hemoglobin\",\"type\":\"float\",\"order\":16},{\"name\":\"Urine.protein\",\"type\":\"int\",\"order\":17},{\"name\":\"serum.creatinine\",\"type\":\"float\",\"order\":18},{\"name\":\"AST\",\"type\":\"int\",\"order\":19},{\"name\":\"ALT\",\"type\":\"int\",\"order\":20},{\"name\":\"Gtp\",\"type\":\"int\",\"order\":21},{\"name\":\"dental.caries\",\"type\":\"int\",\"order\":22}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"randomForest\", \"version\":\"4.7.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "smoking_random_forest_r.rds",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/r",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_stroke_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/stroke/models/stroke_svc_py.pkl"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"gender\",\"type\":\"int\",\"order\":1},{\"name\":\"age\",\"type\":\"float\",\"order\":2},{\"name\":\"hypertension\",\"type\":\"int\",\"order\":3},{\"name\":\"heart_disease\",\"type\":\"int\",\"order\":4},{\"name\":\"ever_married\",\"type\":\"int\",\"order\":5},{\"name\":\"work_type\",\"type\":\"int\",\"order\":6},{\"name\":\"Residence_type\",\"type\":\"int\",\"order\":7},{\"name\":\"avg_glucose_level\",\"type\":\"float\",\"order\":8},{\"name\":\"bmi\",\"type\":\"float\",\"order\":9},{\"name\":\"smoking_status\",\"type\":\"int\",\"order\":10}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"numpy\", \"version\":\"1.22.4\"},{\"library\":\"scikit-learn\", \"version\":\"0.24.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "stroke_svc_py.pkl",
+							"type": "text"
+						},
+						{
+							"key": "serialization",
+							"value": "pickle",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_stroke_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/predictive/stroke/models/stroke_xgboost_r.rds"
+						},
+						{
+							"key": "features",
+							"value": "[{\"name\":\"gender\",\"type\":\"int\",\"order\":1},{\"name\":\"age\",\"type\":\"int\",\"order\":2},{\"name\":\"hypertension\",\"type\":\"int\",\"order\":3},{\"name\":\"heart_disease\",\"type\":\"int\",\"order\":4},{\"name\":\"ever_married\",\"type\":\"int\",\"order\":5},{\"name\":\"work_type\",\"type\":\"int\",\"order\":6},{\"name\":\"Residence_type\",\"type\":\"int\",\"order\":7},{\"name\":\"avg_glucose_level\",\"type\":\"float\",\"order\":8},{\"name\":\"bmi\",\"type\":\"string\",\"order\":9},{\"name\":\"smoking_status\",\"type\":\"int\",\"order\":10}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"caret\", \"version\":\"6.0.94\"},{\"library\":\"xgboost\", \"version\":\"1.7.8.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "stroke_xgboost_r.rds",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/predictive/docker/r",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"predictive",
+						"docker",
+						"r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_HIVProgramSelection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/optimization/hiv-program-selection/model.zip"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"gurobipy\", \"version\":\"11.0.3\"},{\"library\":\"numpy\", \"version\":\"2.1.0\"},{\"library\":\"scipy\", \"version\":\"1.14.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "opt_HIVProgramSelection",
+							"type": "text"
+						},
+						{
+							"key": "docker_tag",
+							"value": "3.12.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/optimization/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"optimization",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_PublicDefibrillatorPlacement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/optimization/public-defibrillator-placement/model.zip"
+						},
+						{
+							"key": "dependencies",
+							"value": "[{\"library\":\"gurobipy\", \"version\":\"11.0.3\"},{\"library\":\"pandas\", \"version\":\"2.2.2\"},{\"library\":\"PyYAML\", \"version\":\"6.0.1\"},{\"library\":\"scipy\", \"version\":\"1.14.1\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "opt_PublicDefibrillatorPlacement",
+							"type": "text"
+						},
+						{
+							"key": "docker_tag",
+							"value": "3.12.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3002/models/optimization/docker/python",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"models",
+						"optimization",
+						"docker",
+						"python"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

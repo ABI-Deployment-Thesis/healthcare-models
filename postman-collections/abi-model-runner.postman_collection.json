@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "c8993adc-8bd9-41fe-84c8-740d44be5df9",
+		"name": "abi-model-runner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10660445"
+	},
+	"item": [
+		{
+			"name": "model-runs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "model-runs/:run_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66cc9bd9c0a225895970d139",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66cc9bd9c0a225895970d139"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_diabetes_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"Pregnancies\",\r\n        \"value\": 4\r\n        },\r\n        {\r\n        \"name\": \"Glucose\",\r\n        \"value\": 137\r\n        },\r\n        {\r\n        \"name\": \"BloodPressure\",\r\n        \"value\": 84\r\n        },\r\n        {\r\n        \"name\": \"SkinThickness\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"Insulin\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"BMI\",\r\n        \"value\": 31.2\r\n        },\r\n        {\r\n        \"name\": \"DiabetesPedigreeFunction\",\r\n        \"value\": 0.252\r\n        },\r\n        {\r\n        \"name\": \"Age\",\r\n        \"value\": 30\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66cca78ed190df4aabe0dbc7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66cca78ed190df4aabe0dbc7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_diabetes_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"pregnant\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"glucose\",\r\n        \"value\": 89\r\n        },\r\n        {\r\n        \"name\": \"pressure\",\r\n        \"value\": 66\r\n        },\r\n        {\r\n        \"name\": \"triceps\",\r\n        \"value\": 23\r\n        },\r\n        {\r\n        \"name\": \"insulin\",\r\n        \"value\": 94\r\n        },\r\n        {\r\n        \"name\": \"mass\",\r\n        \"value\": 28.1\r\n        },\r\n        {\r\n        \"name\": \"pedigree\",\r\n        \"value\": 0.167\r\n        },\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 21\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccaa35d190df4aabe0ddbf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccaa35d190df4aabe0ddbf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_fetal_health_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"baseline value\",\r\n        \"value\": 133.0\r\n        },\r\n        {\r\n        \"name\": \"accelerations\",\r\n        \"value\": 0.002\r\n        },\r\n        {\r\n        \"name\": \"fetal_movement\",\r\n        \"value\": 0.01\r\n        },\r\n        {\r\n        \"name\": \"uterine_contractions\",\r\n        \"value\": 0.003\r\n        },\r\n        {\r\n        \"name\": \"light_decelerations\",\r\n        \"value\": 0.002\r\n        },\r\n        {\r\n        \"name\": \"severe_decelerations\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"prolongued_decelerations\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"abnormal_short_term_variability\",\r\n        \"value\": 46.0\r\n        },\r\n        {\r\n        \"name\": \"mean_value_of_short_term_variability\",\r\n        \"value\": 1.1\r\n        },\r\n        {\r\n        \"name\": \"percentage_of_time_with_abnormal_long_term_variability\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"mean_value_of_long_term_variability\",\r\n        \"value\": 15.4\r\n        },\r\n        {\r\n        \"name\": \"histogram_width\",\r\n        \"value\": 69.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_min\",\r\n        \"value\": 95.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_max\",\r\n        \"value\": 164.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_number_of_peaks\",\r\n        \"value\": 5.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_number_of_zeroes\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_mode\",\r\n        \"value\": 139.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_mean\",\r\n        \"value\": 135.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_median\",\r\n        \"value\": 138.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_variance\",\r\n        \"value\": 9.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_tendency\",\r\n        \"value\": 0.0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66cca7b9d190df4aabe0dbf2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66cca7b9d190df4aabe0dbf2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_fetal_health_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"baseline.value\",\r\n        \"value\": 133.0\r\n        },\r\n        {\r\n        \"name\": \"accelerations\",\r\n        \"value\": 0.002\r\n        },\r\n        {\r\n        \"name\": \"fetal_movement\",\r\n        \"value\": 0.01\r\n        },\r\n        {\r\n        \"name\": \"uterine_contractions\",\r\n        \"value\": 0.003\r\n        },\r\n        {\r\n        \"name\": \"light_decelerations\",\r\n        \"value\": 0.002\r\n        },\r\n        {\r\n        \"name\": \"severe_decelerations\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"prolongued_decelerations\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"abnormal_short_term_variability\",\r\n        \"value\": 46.0\r\n        },\r\n        {\r\n        \"name\": \"mean_value_of_short_term_variability\",\r\n        \"value\": 1.1\r\n        },\r\n        {\r\n        \"name\": \"percentage_of_time_with_abnormal_long_term_variability\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"mean_value_of_long_term_variability\",\r\n        \"value\": 15.4\r\n        },\r\n        {\r\n        \"name\": \"histogram_width\",\r\n        \"value\": 69.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_min\",\r\n        \"value\": 95.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_max\",\r\n        \"value\": 164.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_number_of_peaks\",\r\n        \"value\": 5.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_number_of_zeroes\",\r\n        \"value\": 0.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_mode\",\r\n        \"value\": 139.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_mean\",\r\n        \"value\": 135.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_median\",\r\n        \"value\": 138.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_variance\",\r\n        \"value\": 9.0\r\n        },\r\n        {\r\n        \"name\": \"histogram_tendency\",\r\n        \"value\": 0.0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccaa6fd190df4aabe0ddf9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccaa6fd190df4aabe0ddf9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_insurance_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 29\r\n        },\r\n        {\r\n        \"name\": \"sex\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"bmi\",\r\n        \"value\": 25.600\r\n        },\r\n        {\r\n        \"name\": \"children\",\r\n        \"value\": 4\r\n        },\r\n        {\r\n        \"name\": \"smoker\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"region\",\r\n        \"value\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66cca851d190df4aabe0dc58",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66cca851d190df4aabe0dc58"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_insurance_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 56\r\n        },\r\n        {\r\n        \"name\": \"sex\",\r\n        \"value\": \"female\"\r\n        },\r\n        {\r\n        \"name\": \"bmi\",\r\n        \"value\": 39.8\r\n        },\r\n        {\r\n        \"name\": \"children\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"smoker\",\r\n        \"value\": \"no\"\r\n        },\r\n        {\r\n        \"name\": \"region\",\r\n        \"value\": \"southeast\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccaaced190df4aabe0de55",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccaaced190df4aabe0de55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_smoking_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 35\r\n        },\r\n        {\r\n        \"name\": \"height(cm)\",\r\n        \"value\": 175\r\n        },\r\n        {\r\n        \"name\": \"weight(kg)\",\r\n        \"value\": 80\r\n        },\r\n        {\r\n        \"name\": \"waist(cm)\",\r\n        \"value\": 84.0\r\n        },\r\n        {\r\n        \"name\": \"eyesight(left)\",\r\n        \"value\": 0.8\r\n        },\r\n        {\r\n        \"name\": \"eyesight(right)\",\r\n        \"value\": 1.0\r\n        },\r\n        {\r\n        \"name\": \"hearing(left)\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"hearing(right)\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"systolic\",\r\n        \"value\": 122\r\n        },\r\n        {\r\n        \"name\": \"relaxation\",\r\n        \"value\": 70\r\n        },\r\n        {\r\n        \"name\": \"fasting blood sugar\",\r\n        \"value\": 100\r\n        },\r\n        {\r\n        \"name\": \"Cholesterol\",\r\n        \"value\": 188\r\n        },\r\n        {\r\n        \"name\": \"triglyceride\",\r\n        \"value\": 238\r\n        },\r\n        {\r\n        \"name\": \"HDL\",\r\n        \"value\": 44\r\n        },\r\n        {\r\n        \"name\": \"LDL\",\r\n        \"value\": 96\r\n        },\r\n        {\r\n        \"name\": \"hemoglobin\",\r\n        \"value\": 16.0\r\n        },\r\n        {\r\n        \"name\": \"Urine protein\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"serum creatinine\",\r\n        \"value\": 0.7\r\n        },\r\n        {\r\n        \"name\": \"AST\",\r\n        \"value\": 31\r\n        },\r\n        {\r\n        \"name\": \"ALT\",\r\n        \"value\": 22\r\n        },\r\n        {\r\n        \"name\": \"Gtp\",\r\n        \"value\": 32\r\n        },\r\n        {\r\n        \"name\": \"dental caries\",\r\n        \"value\": 0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66cca980d190df4aabe0dd1d",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66cca980d190df4aabe0dd1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_smoking_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 35\r\n        },\r\n        {\r\n        \"name\": \"height.cm.\",\r\n        \"value\": 175\r\n        },\r\n        {\r\n        \"name\": \"weight.kg.\",\r\n        \"value\": 80\r\n        },\r\n        {\r\n        \"name\": \"sex_num\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"eyesight.left.\",\r\n        \"value\": 0.8\r\n        },\r\n        {\r\n        \"name\": \"eyesight.right.\",\r\n        \"value\": 1.0\r\n        },\r\n        {\r\n        \"name\": \"hearing.left.\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"hearing.right.\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"systolic\",\r\n        \"value\": 122\r\n        },\r\n        {\r\n        \"name\": \"relaxation\",\r\n        \"value\": 70\r\n        },\r\n        {\r\n        \"name\": \"Cholesterol\",\r\n        \"value\": 188\r\n        },\r\n        {\r\n        \"name\": \"triglyceride\",\r\n        \"value\": 238\r\n        },\r\n        {\r\n        \"name\": \"HDL\",\r\n        \"value\": 44\r\n        },\r\n        {\r\n        \"name\": \"LDL\",\r\n        \"value\": 96\r\n        },\r\n        {\r\n        \"name\": \"fasting.blood.sugar\",\r\n        \"value\": 100\r\n        },\r\n        {\r\n        \"name\": \"hemoglobin\",\r\n        \"value\": 16.0\r\n        },\r\n        {\r\n        \"name\": \"Urine.protein\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"serum.creatinine\",\r\n        \"value\": 0.7\r\n        },\r\n        {\r\n        \"name\": \"AST\",\r\n        \"value\": 31\r\n        },\r\n        {\r\n        \"name\": \"ALT\",\r\n        \"value\": 22\r\n        },\r\n        {\r\n        \"name\": \"Gtp\",\r\n        \"value\": 32\r\n        },\r\n        {\r\n        \"name\": \"dental.caries\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"tartar\",\r\n        \"value\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccaae8d190df4aabe0de72",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccaae8d190df4aabe0de72"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_stroke_py",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"gender\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 52.0\r\n        },\r\n        {\r\n        \"name\": \"hypertension\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"heart_disease\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"ever_married\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"work_type\",\r\n        \"value\": 2\r\n        },\r\n        {\r\n        \"name\": \"Residence_type\",\r\n        \"value\": 0\r\n        },\r\n        {\r\n        \"name\": \"avg_glucose_level\",\r\n        \"value\": 69.94\r\n        },\r\n        {\r\n        \"name\": \"bmi\",\r\n        \"value\": 33.3\r\n        },\r\n        {\r\n        \"name\": \"smoking_status\",\r\n        \"value\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66cca9f0d190df4aabe0dd74",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66cca9f0d190df4aabe0dd74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_stroke_r",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"input_features\": [\r\n        {\r\n        \"name\": \"gender\",\r\n        \"value\": 2\r\n        },\r\n        {\r\n        \"name\": \"age\",\r\n        \"value\": 62\r\n        },\r\n        {\r\n        \"name\": \"hypertension\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"heart_disease\",\r\n        \"value\": 2\r\n        },\r\n        {\r\n        \"name\": \"ever_married\",\r\n        \"value\": 2\r\n        },\r\n        {\r\n        \"name\": \"work_type\",\r\n        \"value\": 4\r\n        },\r\n        {\r\n        \"name\": \"Residence_type\",\r\n        \"value\": 1\r\n        },\r\n        {\r\n        \"name\": \"avg_glucose_level\",\r\n        \"value\": 90.6\r\n        },\r\n        {\r\n        \"name\": \"bmi\",\r\n        \"value\": \"overweight\"\r\n        },\r\n        {\r\n        \"name\": \"smoking_status\",\r\n        \"value\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccab06d190df4aabe0deb2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccab06d190df4aabe0deb2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_HIVProgramSelection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/optimization/hiv-program-selection/input.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccef1ed190df4aabe0e426",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccef1ed190df4aabe0e426"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "run_PublicDefibrillatorPlacement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzhkMjcxZjViNjhkNjNjNWEyMzJjMSIsImlhdCI6MTcyNDQzNzE1NX0.Jf01_NxF0duJTB8ccsS6SqD5NGpo_APuM3xEulk4ZGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ruiar/Desktop/healthcare-models/optimization/public-defibrillator-placement/input.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3003/model-runs/66ccef36d190df4aabe0e432",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3003",
+					"path": [
+						"model-runs",
+						"66ccef36d190df4aabe0e432"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
